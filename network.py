@@ -1,13 +1,13 @@
 import socket
 import pickle
 # Pickle decerialises objects into bytes and sends them
-# Over a network, so it transforms and object into bytes and sends it
+# Over a network, so it transforms an object into bytes and sends it
 # Using pickle.dumps(), and the opposite using pickle.loads()
 
 class Network:
     def __init__(self):
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server = "192.168.43.111" # Change this
+        self.server = "127.0.0.1" # Change this
         self.port = 5555
         self.addr = (self.server, self.port)
         self.p = self.connect()

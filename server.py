@@ -4,14 +4,14 @@ import sys
 from game import Game
 import pickle
 
-server = "192.168.43.111" # Change this
+server = "127.0.0.1" # Change this
 port = 5555
 
 # Setting up a socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
-    s.bind((server, port))
+    s.bind((server, port)) 
 except socket.error as e:
     str(e)
 
